@@ -318,7 +318,7 @@ def long_name_steals_a_ton?
   steal_most_name = ""
   steal_a_ton = false
   
-  =begin access.each do |home_away,  team_info|                     
+  access.each do |home_away,  team_info|                     
       team_info.each do |team_info_selector, value|
         if value.class == Hash
           value.each do |player, stats|
@@ -333,8 +333,7 @@ def long_name_steals_a_ton?
           end
         end
       end
-  end 
-  =end
+  end
   
   if player_with_longest_name == steal_most_name
     steal_a_ton = true 
