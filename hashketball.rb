@@ -63,7 +63,7 @@ def team_colors(team_name)
       #binding.pry
       if value.include?(team_name)
         team_info_selector == :colors
-        return [:colors][value]
+        return [team_info_selector][value]
       end
     end
   end
