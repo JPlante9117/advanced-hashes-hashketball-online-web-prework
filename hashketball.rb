@@ -139,15 +139,37 @@ def team_colors(team_name)
   access = game_hash
   
   access.each do |home_away,  team_info|                                  #same as above until . . .
-      if access[home_away].values.include?(team_name)                     #check if the team name matches
-        team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
-          if team_info_selector == :colors                                #force the selector to be :colors 
+    if access[home_away].values.include?(team_name)                     #check if the team name matches
+      team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
+        if team_info_selector == :colors                                #force the selector to be :colors 
             return value                                                  #and return it's value!
-          end
         end
       end
     end
   end
+end
+
+def team_names
+  access = game_hash
+  
+  team_array = []
+  
+  access.each do |home_away,  team_info|                                  #same as above until . . .
+    team_info.each do |team_info_selector, value|
+      binding.pry
+    end
+  end
+end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
