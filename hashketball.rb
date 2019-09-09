@@ -48,9 +48,7 @@ def shoe_size(player_name)
   
   access.each do |home_away,  team_info|
       if value.include?(player_name)
-        team_info.each do |team_info_selector, value|
-          team_info_selector == :colors
-          return value
+        return access[home_away][team_info_selector][player_name][:shoe]
       end
     end
   end
@@ -60,10 +58,7 @@ def team_colors(team_name)
   access = game_hash
   
   access.each do |home_away,  team_info|
-    team_info.each do |team_info_selector, value|
-      
-      #binding.pry
-      if access[home_awayvalue.include?(team_name)
+      if access[home_away].value.include?(team_name)
         team_info_selector.each do |a, b|
           binding.pry
         end
