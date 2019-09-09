@@ -301,6 +301,7 @@ def player_with_longest_name
       if value.include?(player_name)
         if longest_name_num < access[home_away][team_info_selector][player_name].length
           longest_name_num = access[home_away][team_info_selector][player_name].length
+          longest_name = player_name
         end
       end
     end
