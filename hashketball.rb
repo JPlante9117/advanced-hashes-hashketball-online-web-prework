@@ -191,7 +191,11 @@ def player_stats(player_name)
   access = game_hash
   
   access.each do |home_away, team_info|
-    binding.pry
+    team_info.each do |team_info_selector, value|
+      if value.include?(player_name)
+        return access[home_away][team_info_selector][player_name]
+      end
+    end
   end
   
 end
