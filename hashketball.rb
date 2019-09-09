@@ -35,7 +35,7 @@ def num_points_scored(player_name)
   access = game_hash
   
   access.each do |home_away,  team_info|
-    team_info.each do |a, b|
+    team_info.each do |team_info_selector, b|
       binding.pry
     end
 
