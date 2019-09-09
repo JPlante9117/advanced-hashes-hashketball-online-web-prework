@@ -28,15 +28,11 @@ def game_hash
     }
     
   }
-
+  binding.pry
   hash
 end
 
 def num_points_scored
-
-binding.pry
-  
-game_hash[hash][:home]
   
 end
 
