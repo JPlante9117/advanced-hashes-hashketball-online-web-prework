@@ -164,7 +164,7 @@ def team_names
   return team_array                                                       #RETURN YOUR STUFF MAN!
 end
   
-def player_numbers
+def player_numbers(team_name)
   access = game_hash
   numbers_array = []
   
