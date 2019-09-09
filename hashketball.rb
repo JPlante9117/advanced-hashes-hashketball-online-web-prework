@@ -156,8 +156,8 @@ def team_names
   
   access.each do |home_away,  team_info|                                  #same as above until . . .
     team_info.each do |team_info_selector, value|
-      if team_info_selector == :team_names
-        team_array << access[home_away][team_info_selector][value]
+      if team_info_selector == :team_name
+        team_array << value
       end
     end
   end
