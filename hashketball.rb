@@ -272,7 +272,8 @@ def winning_team
         end
       end
     else
-      if value.class == Hash 
+      team_info.each do |team_info_selector, value|
+        if value.class == Hash 
           value.each do |player, stats|
             stats.each do |stat, int|
               if stat == :points
@@ -283,6 +284,7 @@ def winning_team
               end
             end
           end
+        end
       end
     end
   end
