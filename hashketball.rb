@@ -61,7 +61,7 @@ def team_colors(team_name)
   access.each do |home_away,  team_info|
     team_info.each do |team_info_selector, value|
       
-      binding.pry
+      #binding.pry
       if value.include?(team_name)
         color = access[home_away][:colors][value]
       end
