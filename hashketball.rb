@@ -28,7 +28,6 @@ def game_hash
     }
     
   }
-  binding.pry
   hash
 end
 
