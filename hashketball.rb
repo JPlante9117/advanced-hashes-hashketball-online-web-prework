@@ -278,7 +278,7 @@ def winning_team
                 charlotte_points += int
                 if charlotte_points > brooklyn_points
                   winner = access[:away][:team_name]
-                end
+                #end
               end
             end
           end
