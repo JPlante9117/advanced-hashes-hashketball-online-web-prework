@@ -172,8 +172,10 @@ def player_numbers
     if access[home_away].values.include?(team_name)                     #check if the team name matches
       team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
         if value.class == Hash
-          value.each do |a, b|
-              binding.pry
+          value.each do |player, stats|
+              stats.each do |stat, int|
+                if stat == :number 
+                  numbers_array << int.to_i
           end
         end
       end
