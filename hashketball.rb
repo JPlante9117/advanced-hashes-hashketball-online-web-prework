@@ -154,17 +154,29 @@ def team_names
   
   team_array = []
   
-  access.each do |home_away,  team_info|                                  #same as above until . . .
+  access.each do |home_away,  team_info|                                  #same as above except . . .
     team_info.each do |team_info_selector, value|
       if team_info_selector == :team_name
         team_array << value
       end
     end
   end
-  return team_array
+  return team_array                                                       #RETURN YOUR STUFF MAN!
 end
   
+def player_numbers
+  access = game_hash
+  numbers_array = []
   
+  access.each do |home_away,  team_info|                                    #iterate into the first hash
+    team_info.each do |team_info_selector, value|                           #iterate into the second hash
+      if value.include?(player_name)                                        #check for specific player name
+        return access[home_away][team_info_selector][player_name][:points]  #when found, return their points
+      end
+    end
+  end
+  
+end
   
   
   
