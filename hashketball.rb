@@ -310,6 +310,27 @@ def player_with_longest_name
   end
   longest_name
 end
+
+def long_name_steals_a_ton?
+  access = game_hash
+  longest_name = ""
+  longest_name_num = 0
+  steals
+  
+  access.each do |home_away, team_info|
+    team_info.each do |team_info_selector, value|
+      if value.class == Hash 
+        value.each do |player, stats|
+          if longest_name_num < player.length 
+            longest_name = player
+            longest_name_num = player.length
+          end
+        end
+      end
+    end
+  end
+  longest_name
+end
   
 
   
