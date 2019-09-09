@@ -251,7 +251,15 @@ def most_points_scored
   
 end
 
+def winning_team
+  access = game_hash
+  winner = ""
+  brooklyn_points = 0 
+  charlotte_points = 0 
   
+  
+  
+end
   
   
   
