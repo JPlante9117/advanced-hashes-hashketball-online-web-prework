@@ -155,9 +155,9 @@ def team_names
   team_array = []
   
   access.each do |home_away,  team_info|                                  #same as above until . . .
-      if access[home_away].values.include?(:team_name) 
-        team_array << :team_name.value
-      end
+    team_info.each do |team_info_selector, value|
+      binding.pry
+    end
   end
   
   
