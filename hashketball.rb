@@ -60,7 +60,6 @@ def team_colors(team_name)
   
   access.each do |home_away,  team_info|
       binding.pry
-      end
     
   end
 end
