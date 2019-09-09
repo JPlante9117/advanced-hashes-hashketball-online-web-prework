@@ -33,8 +33,10 @@ def game_hash
 end
 
 def num_points_scored
+
+binding.pry
   
- p game_hash[hash][:home]
+game_hash[hash][:home]
   
 end
 
