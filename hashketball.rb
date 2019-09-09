@@ -32,7 +32,13 @@ def game_hash
   hash
 end
 
-def num_points_scored
+def num_points_scored(player_name)
+  access = game_hash[hash]
   
+  access.each do |a,b|
+
+    binding.pry
+
+  end
 end
 
