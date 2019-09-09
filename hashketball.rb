@@ -349,9 +349,9 @@ def long_name_steals_a_ton?
     end
   end
   
-  #if longest_name == steal_most_name
-    #steal_a_ton = TRUE
-  #end
+  if longest_name == steal_most_name
+    steal_a_ton = TRUE
+  end
   
   steal_a_ton
   
