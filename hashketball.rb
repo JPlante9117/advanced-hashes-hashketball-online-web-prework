@@ -59,11 +59,12 @@ def team_colors(team_name)
   access = game_hash
   
   access.each do |home_away,  team_info|
-      team_info.each do |team_info_selector, value|
-      #binding.pry
-      if value.include?(team_name)
-        team_info_selector == :colors
-        return [team_info_selector][value]
+      if access[home_away].values.include?(team_name)
+        team_info.each do |team_info_selector, value|
+          if team_info_selector == :colors
+            return value
+          end
+        end
       end
     end
   end
