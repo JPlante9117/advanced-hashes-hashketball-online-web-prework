@@ -63,7 +63,7 @@ def team_colors(team_name)
       
       #binding.pry
       if value.include?(team_name)
-        puts access[home_away][:colors][value]
+        return access[home_away][team_info_selector][:colors][value]
       end
     end
   end
