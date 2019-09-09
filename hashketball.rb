@@ -245,7 +245,7 @@ def most_points_scored
         end
       end
   end
-  return player_name
+  return player_name                                      #returned outside everything to make sure it iterates through both teams
   
   
   
