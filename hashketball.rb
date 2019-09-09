@@ -202,6 +202,7 @@ end
 
 def big_shoe_rebounds
   access = game_hash
+  shoe_array = []
   
   access.each do |home_away,  team_info|                                  #same as above until . . .
     if access[home_away].values.include?(team_name)                     #check if the team name matches
@@ -210,7 +211,7 @@ def big_shoe_rebounds
           value.each do |player, stats|
               stats.each do |stat, int|
                 if stat == :shoe 
-                  numbers_array << int.to_i
+                  shoe_array << int.to_i
                 end
               
             end
