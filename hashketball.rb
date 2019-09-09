@@ -54,3 +54,19 @@ def shoe_size(player_name)
     end
   end
 end
+
+def team_colors(team_name)
+  access = game_hash
+  
+  access.each do |home_away,  team_info|
+    team_info.each do |team_info_selector, value|
+      if value.include?(team_name)
+        return access[home_away][team_info_selector][team_name][:colors]
+      end
+    end
+  end
+end
+
+
+
+
