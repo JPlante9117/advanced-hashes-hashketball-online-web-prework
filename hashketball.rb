@@ -38,6 +38,7 @@ def num_points_scored(player_name)
     team_info.each do |team_info_selector, value|
       if team_info_selector = :players
         team_info_selector[player_name][:points]
+      end
     end
 
   end
