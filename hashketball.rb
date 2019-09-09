@@ -146,8 +146,8 @@ def team_colors(team_name)
           end
         end
       end
-    end
   end
+end
 
 def team_names
   access = game_hash
