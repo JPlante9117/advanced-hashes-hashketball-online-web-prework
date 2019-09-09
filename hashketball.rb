@@ -187,7 +187,7 @@ def player_numbers(team_name)
   return numbers_array
 end
   
-def player_stats
+def player_stats(player_name)
   access = game_hash
   
   access.each do |home_away, team_info|
