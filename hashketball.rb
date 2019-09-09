@@ -34,11 +34,7 @@ end
 
 def num_points_scored
   
-  hash.each do |a, b|
-    binding.pry
-    
-  end
-  
+ p game_hash[hash][:home]
   
 end
 
