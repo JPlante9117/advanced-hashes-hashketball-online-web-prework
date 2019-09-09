@@ -177,7 +177,7 @@ def player_numbers
                 if stat == :number 
                   numbers_array << int.to_i
                 end
-              end
+              
             end
           end
         end
