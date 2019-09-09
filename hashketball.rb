@@ -171,8 +171,8 @@ def player_numbers
   access.each do |home_away,  team_info|                                  #same as above until . . .
     if access[home_away].values.include?(team_name)                     #check if the team name matches
       team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
-        if team_info_selector == :players                                #force the selector to be :colors 
-            value.each do |a, b|
+        if value.class == Hash
+          value.each do |a, b|
               binding.pry
           end
         end
