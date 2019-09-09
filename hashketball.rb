@@ -184,6 +184,7 @@ def player_numbers
       end
     end
   end
+  return numbers_array
 end
   
   
