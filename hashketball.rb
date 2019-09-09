@@ -280,7 +280,7 @@ def winning_team
                   winner = access[:away][:team_name]
                 #end
               #end
-            end
+            #end
           end
         
       end
