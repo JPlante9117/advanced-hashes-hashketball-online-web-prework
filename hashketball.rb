@@ -146,30 +146,8 @@ def team_colors(team_name)
           end
         end
       end
-  end
-end
-
-def team_names
-  access = game_hash
-  
-  team_array = []
-  
-  access.each do |home_away,  team_info|                                  #same as above until . . .
-    team_info.each do |team_info_selector, value|
-      binding.pry
     end
   end
-end
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
 
 
