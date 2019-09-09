@@ -49,7 +49,7 @@ def shoe_size(player_name)
   access.each do |home_away,  team_info|
       if value.include?(player_name)
         team_info.each do |team_info_selector, value|
-          team_info_selector
+          team_info_selector == :colors
       end
     end
   end
