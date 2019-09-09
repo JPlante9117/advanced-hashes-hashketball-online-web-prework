@@ -168,14 +168,17 @@ def player_numbers
   access = game_hash
   numbers_array = []
   
-  access.each do |home_away,  team_info|                                    #iterate into the first hash
-    team_info.each do |team_info_selector, value|                           #iterate into the second hash
-      value.each do |a, b|
-        binding.pry
+  access.each do |home_away,  team_info|                                  #same as above until . . .
+    if access[home_away].values.include?(team_name)                     #check if the team name matches
+      team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
+        if team_info_selector == :players                                #force the selector to be :colors 
+            value.each do |a, b|
+              binding.pry
+          end
+        end
       end
     end
   end
-  
 end
   
   
