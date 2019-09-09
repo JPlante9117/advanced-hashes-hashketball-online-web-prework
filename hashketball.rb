@@ -290,7 +290,22 @@ def winning_team
   end
   return winner
 end
+
+def player_with_longest_name
+  access = game_hash
+  longest_name = ""
+  longest_name_num = 0 
   
+  access.each do |home_away, team_info|
+    team_info.each do |team_info_selector, value|
+      if value.include?(player_name)
+        if longest_name_num < access[home_away][team_info_selector][player_name].length
+          longest_name_num = 
+      end
+    end
+  end
+  
+end
   
   
   
