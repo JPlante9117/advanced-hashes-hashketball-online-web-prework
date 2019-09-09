@@ -218,10 +218,10 @@ def big_shoe_rebounds
                 end
               end
           end
-          return access[home_away][team_info_selector][player_name][:rebounds]
         end
       end
   end
+  return access[home_away][team_info_selector][player_name][:rebounds]
 end  
 
   
