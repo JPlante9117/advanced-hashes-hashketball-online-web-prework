@@ -315,7 +315,8 @@ def long_name_steals_a_ton?
   access = game_hash
   longest_name = ""
   longest_name_num = 0
-  steals
+  steals = 0
+  steals_a_ton? = false
   
   access.each do |home_away, team_info|
     team_info.each do |team_info_selector, value|
