@@ -161,6 +161,7 @@ def team_names
       end
     end
   end
+  return team_array
 end
   
   
