@@ -270,6 +270,7 @@ def winning_team
             end
           end
         end
+      end
     else
       if value.class == Hash 
           value.each do |player, stats|
