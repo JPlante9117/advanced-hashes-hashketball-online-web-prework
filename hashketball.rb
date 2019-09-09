@@ -312,6 +312,38 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
+  
+  access = game_hash
+  steal_amount = 0
+  steal_most_name = ""
+  steal_a_ton = false
+  
+  access.each do |home_away,  team_info|                     
+      team_info.each do |team_info_selector, value|
+        if value.class == Hash
+          value.each do |player, stats|
+              stats.each do |stat, int|
+                if stat == :steals 
+                  if int > steal_amount
+                    steal_amount = int
+                    steal_most_name = player
+                  end
+                end
+              end
+          end
+        end
+      end
+  end
+  
+  if player_with_longest_name == steal_most_name
+    steal_a_ton = true 
+  end
+  
+  steal_a_ton
+  
+end
+
+=begin def long_name_steals_a_ton?
   access = game_hash
   steal_amount = 0
   steal_most_name = ""
@@ -358,6 +390,7 @@ def long_name_steals_a_ton?
   
   
 end
+=end
   
 
   
