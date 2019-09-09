@@ -203,10 +203,19 @@ end
 def big_shoe_rebounds
   access = game_hash
   
-  access.each do |home_away, team_info|
-    team_info.each do |team_info_selector, value|
-      if value.include?(player_name)
-        return access[home_away][team_info_selector][player_name]
+  access.each do |home_away,  team_info|                                  #same as above until . . .
+    if access[home_away].values.include?(team_name)                     #check if the team name matches
+      team_info.each do |team_info_selector, value|                     #if it does, then iterate into that team
+        if value.class == Hash
+          value.each do |player, stats|
+              stats.each do |stat, int|
+                if stat == :shoe 
+                  numbers_array << int.to_i
+                end
+              
+            end
+          end
+        end
       end
     end
   end
