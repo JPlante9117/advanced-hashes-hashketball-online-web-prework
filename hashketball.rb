@@ -303,6 +303,7 @@ def player_with_longest_name
           if longest_name_num < player.length 
             longest_name = player
             longest_name_num = player.length
+          end
         end
       end
     end
