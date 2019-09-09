@@ -190,7 +190,9 @@ end
 def player_stats
   access = game_hash
   
-  binding.pry
+  access.each do |home_away, team_info|
+    binding.pry
+  end
   
 end
   
