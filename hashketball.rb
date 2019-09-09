@@ -170,8 +170,8 @@ def player_numbers
   
   access.each do |home_away,  team_info|                                    #iterate into the first hash
     team_info.each do |team_info_selector, value|                           #iterate into the second hash
-      if value.include?(player_name)                                        #check for specific player name
-        return access[home_away][team_info_selector][player_name][:points]  #when found, return their points
+      value.each do |a, b|
+        binding.pry
       end
     end
   end
