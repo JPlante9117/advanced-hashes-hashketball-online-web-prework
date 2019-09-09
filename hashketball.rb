@@ -149,6 +149,27 @@ def team_colors(team_name)
     end
   end
 
+def team_names
+  access = game_hash
+  
+  team_array = []
+  
+  access.each do |home_away,  team_info|                                  #same as above until . . .
+      if access[home_away].values.include?(:team_name) 
+        team_array << :team_name.value
+      end
+  end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 
 
