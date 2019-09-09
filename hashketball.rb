@@ -45,7 +45,7 @@ def game_hash
           slam_dunks: 5},
         "Jason Terry" => {
           number: 31, 
-          hoe: 15, 
+          shoe: 15, 
           points: 19, 
           rebounds: 2, 
           assists: 2, 
