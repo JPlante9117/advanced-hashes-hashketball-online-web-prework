@@ -188,7 +188,11 @@ def player_numbers(team_name)
 end
   
 def player_stats
+  access = game_hash
   
+  binding.pry
+  
+end
   
   
   
