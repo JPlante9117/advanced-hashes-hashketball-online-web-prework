@@ -37,11 +37,9 @@ def num_points_scored(player_name)
   access.each do |home_away,  team_info|
     team_info.each do |team_info_selector, value|
       if value.include?(player_name)
-        player_points = access[home_away][team_info_selector][value][player_name][:points]
+        return access[home_away][team_info_selector][player_name][:points]
       end
     end
-
   end
-  player_points
 end
 
