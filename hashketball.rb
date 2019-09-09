@@ -176,6 +176,9 @@ def player_numbers
               stats.each do |stat, int|
                 if stat == :number 
                   numbers_array << int.to_i
+                end
+              end
+            end
           end
         end
       end
