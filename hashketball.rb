@@ -300,11 +300,14 @@ def player_with_longest_name
     team_info.each do |team_info_selector, value|
       if value.class == Hash 
         value.each do |player, stats|
-          binding.pry
+          if longest_name_num < player.length 
+            longest_name = player
+            longest_name_num = player.length
         end
       end
     end
   end
+  longest_name
 end
   
   
