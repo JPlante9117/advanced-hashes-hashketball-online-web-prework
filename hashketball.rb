@@ -257,8 +257,34 @@ def winning_team
   brooklyn_points = 0 
   charlotte_points = 0 
   
-  
-  
+  access.each do |home_away, team_info|
+    if home_away == :home
+      team_info.each do |team_info_selector, value|
+        if value.class == Hash 
+          value.each do |player, stats|
+            stats.each do |stat, int|
+              if stat == :points
+                brooklyn_points += int
+                winner = access[:home][:team_name]
+              end
+            end
+          end
+        end
+    else
+      if value.class == Hash 
+          value.each do |player, stats|
+            stats.each do |stat, int|
+              if stat == :points
+                charlotte_points += int
+                if charlotte_points > brooklyn_points
+                  winner = access[:away][:team_name]
+                end
+              end
+            end
+          end
+        end
+    end
+  return winner
 end
   
   
