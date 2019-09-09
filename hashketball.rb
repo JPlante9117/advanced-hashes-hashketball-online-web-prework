@@ -323,7 +323,7 @@ def long_name_steals_a_ton?
           value.each do |player, stats|
               stats.each do |stat, int|
                 if stat == :steals 
-                  if int > points
+                  if int > steal_amount
                     steal_amount = int
                     steal_most_name = player
                   end
